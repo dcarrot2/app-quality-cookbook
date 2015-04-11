@@ -32,7 +32,9 @@ The "os" field defines the operating system name for which a feature is enabled.
 For example, if the os is "android" and the percentage is "50", 50% of android users should see this feature:
 
 ```nohighlight
-$ java Main 1357246 android
+$ mvn package
+...
+$ mvn exec:java
 feature_a:true
 feature_b:false
 feature_c:true
@@ -93,7 +95,9 @@ feature_c:
 And you pass a lower version to the program:
 
 ```nohighlight
-$ java Main 1357246 android 2
+$ mvn:package
+...
+$ mvn:exec java -Dexec.args="1357246 android 2"
 ```
 
 You should see:
